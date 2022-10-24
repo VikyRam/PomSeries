@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Open Cart WebTest Suite" verbose="4" thread-count="3" parallel="tests">
+
+    <listeners>
+        <listener
+                class-name="com.qa.webtest.listeners.AnnotationTransformer"/>
+        <listener
+                class-name="com.qa.webtest.listeners.ExtentReportListener"/>
+        <listener
+                class-name="com.qa.webtest.listeners.TestAllureListener"/>
+    </listeners>
+
+    <test name="Open Cart Login Page Test">
+        <!--        <parameter name="browser" value="chrome" />-->
+        <!--        <parameter name="browserversion" value="89" />-->
+        <classes>
+            <class name="com.qa.webtest.tests.LoginPageTest"/>
+        </classes>
+    </test>
+
+
+    <!--    <test name="Open Cart Login Page Test">-->
+    <!--&lt;!&ndash;        <parameter name="browser" value="firefox"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;        <parameter name="browserversion" value="83"/>&ndash;&gt;-->
+    <!--        <classes>-->
+    <!--            <class name="com.qa.webtest.tests.LoginPageTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--    <test name="Open Cart Accounts Page Test">-->
+    <!--&lt;!&ndash;        <parameter name="browser" value="chrome"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;        <parameter name="browserversion" value="90"/>&ndash;&gt;-->
+    <!--        <classes>-->
+    <!--            <class name="com.qa.webtest.tests.AccountPageTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--    <test name="Open Cart Registration Page Test">-->
+    <!--&lt;!&ndash;&lt;!&ndash;        <parameter name="browser" value="chrome"/>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;        <parameter name="browserversion" value="89"/>&ndash;&gt;&ndash;&gt;-->
+    <!--        <classes>-->
+    <!--            <class name="com.qa.webtest.tests.RegistrationPageTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--    <test name="Open Cart ProductInfo Page Test">-->
+    <!--        &lt;!&ndash;&lt;!&ndash;        <parameter name="browser" value="chrome"/>&ndash;&gt;&ndash;&gt;-->
+    <!--        &lt;!&ndash;&lt;!&ndash;        <parameter name="browserversion" value="89"/>&ndash;&gt;&ndash;&gt;-->
+    <!--        <classes>-->
+    <!--            <class name="com.qa.webtest.tests.ProductInfoPageTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+
+    <!-- <test name="Open Cart Product Info Page Test"> <classes> <class name="com.qa.opencart.tests.ProductInfoPageTest"
+        /> </classes> </test> -->
+
+
+    <!-- <test name="Open Cart Registration Page Test"> <classes> <class name="com.qa.opencart.tests.RegistrationPageTest"
+        /> </classes> </test> -->
+
+</suite>
