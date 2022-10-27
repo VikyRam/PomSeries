@@ -20,7 +20,7 @@ public class Constants {
     public static final int MACBOOKPRO_IMAGE_COUNT=3;
     public static final int MACBOOKAIR_IMAGE_COUNT=3;
 
-    public static final int DEFAULT_TIME_OUT=5;
+    public static final int DEFAULT_TIME_OUT=7;
 
     public static List<String> getExpectedSectList(){
         List<String> expectedSectionList=new ArrayList<String>();
