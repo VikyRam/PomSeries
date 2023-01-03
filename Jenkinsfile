@@ -37,7 +37,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/VikyRam/PomSeries.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunner/testng_regression.xml"
+                    sh "mvn clean install"
 
                 }
             }
@@ -77,27 +77,27 @@ pipeline
             }
         }
 
-        stage('Sanity Automation Test') {
-            steps {
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/VikyRam/PomSeries.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunner/testng_regression.xml"
-
-                }
-            }
-        }
-
-        stage('Publish sanity Extent Report'){
-            steps{
-                     publishHTML([allowMissing: false,
-                                  alwaysLinkToLastBuild: false,
-                                  keepAll: true,
-                                  reportDir: 'reports',
-                                  reportFiles: 'TestExecutionReport.html',
-                                  reportName: 'HTML Sanity Extent Report',
-                                  reportTitles: ''])
-            }
-        }
+//         stage('Sanity Automation Test') {
+//             steps {
+//                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+//                     git 'https://github.com/VikyRam/PomSeries.git'
+//                     sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunner/testng_regression.xml"
+//
+//                 }
+//             }
+//         }
+//
+//         stage('Publish sanity Extent Report'){
+//             steps{
+//                      publishHTML([allowMissing: false,
+//                                   alwaysLinkToLastBuild: false,
+//                                   keepAll: true,
+//                                   reportDir: 'reports',
+//                                   reportFiles: 'TestExecutionReport.html',
+//                                   reportName: 'HTML Sanity Extent Report',
+//                                   reportTitles: ''])
+//             }
+//         }
 
 
     }
