@@ -27,4 +27,15 @@ public class OptionsManager {
         return co;
     }
 
+    public FirefoxOptions firefoxOption() {
+        fo = new FirefoxOptions();
+        if (Boolean.parseBoolean(prop.getProperty("headless"))) {
+            co.addArguments("--headless");
+        }
+        if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
+            co.addArguments("--incognito");
+        }
+        return fo;
+    }
+
 }

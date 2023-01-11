@@ -5,6 +5,7 @@ import com.qa.webtest.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import java.util.Properties;
@@ -23,13 +24,19 @@ public class BaseTest {
 
     SoftAssert softAssert;
 
+    @Parameters({"browser","browserversion"})
     @BeforeTest
-    public void setup()
+    public void setup(String browser,String browserVersion)
     {
         df=new Driverfactory();
         prop=df.init_prop();
-        driver= df.init_driver(prop);
 
+        if(browser!=null)
+        {
+            prop.setProperty("browser",browser);
+            prop.setProperty("browserversion",browserVersion);
+        }
+        driver= df.init_driver(prop);
         loginPage=new LoginPage(driver);
         softAssert=new SoftAssert();
 

@@ -12,13 +12,30 @@
                 class-name="com.qa.webtest.listeners.TestAllureListener"/>
     </listeners>
 
-    <test name="Open Cart Login Page Test">
-        <!--        <parameter name="browser" value="chrome" />-->
-        <!--        <parameter name="browserversion" value="89" />-->
+    <test name="Open Cart Login Page Test - ch - 91">
+                <parameter name="browser" value="chrome"/>
+                <parameter name="browserversion" value="89"/>
         <classes>
             <class name="com.qa.webtest.tests.LoginPageTest"/>
         </classes>
     </test>
+
+    <test name="Open Cart Login Page Test - ch - 90">
+        <parameter name="browser" value="chrome" />
+        <parameter name="browserversion" value="90" />
+        <classes>
+            <class name="com.qa.webtest.tests.LoginPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Open Cart Login Page Test - ch - 83">
+        <parameter name="browser" value="chrome" />
+        <parameter name="browserversion" value="83" />
+        <classes>
+            <class name="com.qa.webtest.tests.LoginPageTest"/>
+        </classes>
+    </test>
+
 
 
     <!--    <test name="Open Cart Login Page Test">-->
@@ -29,13 +46,14 @@
     <!--        </classes>-->
     <!--    </test>-->
 
-    <!--    <test name="Open Cart Accounts Page Test">-->
-    <!--&lt;!&ndash;        <parameter name="browser" value="chrome"/>&ndash;&gt;-->
-    <!--&lt;!&ndash;        <parameter name="browserversion" value="90"/>&ndash;&gt;-->
-    <!--        <classes>-->
-    <!--            <class name="com.qa.webtest.tests.AccountPageTest"/>-->
-    <!--        </classes>-->
-    <!--    </test>-->
+        <test name="Open Cart Accounts Page Test - ch - 90">
+            <parameter name="browser" value="chrome"/>
+            <parameter name="browserversion" value="90"/>
+            <classes>
+                <class name="com.qa.webtest.tests.AccountPageTest"/>
+            </classes>
+        </test>
+
 
     <!--    <test name="Open Cart Registration Page Test">-->
     <!--&lt;!&ndash;&lt;!&ndash;        <parameter name="browser" value="chrome"/>&ndash;&gt;&ndash;&gt;-->
